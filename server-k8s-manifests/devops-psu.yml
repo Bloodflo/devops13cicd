@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: devops-psu-server
-        image: ВАШ_DOCKERHUB_НИК/devops-psu:latest  # Укажите свой ник!
+        image: Bloodflo/devops-psu:latest  # Укажите свой ник!
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
