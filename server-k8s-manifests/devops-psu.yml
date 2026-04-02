@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
-meta
+metadata:
   name: devops-psu
   labels:
     app: devops-psu
-    release-date: RELEASE-DATE  # Это поле будет менять CD пайплайн
+    release-date: RELEASE-DATE
   namespace: devops-psu
 spec:
   replicas: 1
@@ -19,14 +19,14 @@ spec:
     spec:
       containers:
       - name: devops-psu-server
-        image: Bloodflo/devops-psu:latest  # Укажите свой ник!
+        image: Bloodflo/devops-psu:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
 ---
 apiVersion: v1
 kind: Service
-meta
+metadata:
   name: service-devops
   labels:
     app: devops-psu
